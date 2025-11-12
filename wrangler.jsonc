@@ -1,0 +1,30 @@
+{
+  // Unique identifier for the Cloudflare resource
+  "name": "loomlett",
+
+  // Required – tells Cloudflare which runtime features are guaranteed
+  "compatibility_date": "2025-11-10",
+
+  // Static‑site configuration – where the built files live
+  "site": {
+    "bucket": "./dist"
+  },
+
+  // Explicit entry‑point that forwards to the assets
+  "main": "workers-site/index.js"
+
+  // -------------------------------------------------
+  // Everything below this line is optional.
+  // Add it only when you need the feature.
+  // -------------------------------------------------
+  // "workers_dev": true,
+  // "route": { "pattern": "tea.elderwoods.com/*", "zone_name": "elderwoods.com" },
+  // "kv_namespaces": [{ "binding": "MY_KV", "id": "<KV_ID>" }],
+  // "env": {
+  //   "staging": {
+  //     "name": "loomlett-staging",
+  //     "site": { "bucket": "./dist-staging" },
+  //     "main": "workers-site/index.js"
+  //   }
+  // }
+}
